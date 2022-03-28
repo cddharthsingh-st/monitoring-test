@@ -9,3 +9,10 @@ def hellowWorld1(event, context):
     }
     print(res)
     return None
+
+def secondLambda(event, context):
+    lst = []
+    for i in range(20):
+        lst.append(i*i)
+    print (lst)
+    return None

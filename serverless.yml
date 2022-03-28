@@ -20,6 +20,21 @@ functions:
     timeout: 30
     memorySize: 128
     events:
+      - schedule: "rate(6 hours)"
+    package: 
+      patterns:
+        - "!node_modules/**"
+        - "!yarn.lock"
+        - "!package.json"
+        - "!package-lock.json"
+  
+  theLambda:
+    name: python-List
+    handler: lambda.secondLambda
+    description: test-lambda
+    timeout: 30
+    memorySize: 128
+    events:
       - schedule: "rate(5 minutes)"
     package: 
       patterns:
