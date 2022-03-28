@@ -28,7 +28,7 @@ functions:
         - "!package.json"
         - "!package-lock.json"
   
-  theLambda:
+  listLambda:
     name: python-List
     handler: lambda.secondLambda
     description: test-lambda
