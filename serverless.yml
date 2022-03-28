@@ -20,7 +20,7 @@ functions:
     timeout: 30
     memorySize: 128
     events:
-      - schedule: cron(* * * * *)
+      - schedule: "rate(5 minutes)"
     package: 
       patterns:
         - "!node_modules/**"
