@@ -19,6 +19,8 @@ functions:
     description: test-lambda
     timeout: 30
     memorySize: 128
+    events:
+      - schedule: cron(*/10 * * * *)
     package: 
       patterns:
         - "!node_modules/**"
