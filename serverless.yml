@@ -1,0 +1,27 @@
+service: hellow-world-python-lambda
+
+provider: 
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: us-east-1
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  individually: true
+
+functions:
+  theLambda:
+    name: hellow-world-python
+    handler: lambda.hellowWorld1
+    description: test-lambda
+    timeout: 30
+    memorySize: 128
+    package: 
+      patterns:
+        - "!node_modules/**"
+        - "!yarn.lock"
+        - "!package.json"
+        - "!package-lock.json"
